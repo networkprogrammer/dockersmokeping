@@ -14,4 +14,4 @@ mkdir -p smokeping/syslog
 
 touch smokeping/syslog/syslog smokeping/syslog/apache2
 
-##Fill /etcsmokeping with entries 
+Fill /etcsmokeping with entries 
