@@ -1,0 +1,16 @@
+version: '2'
+services:
+  smokeping:
+    build: .
+    image: smokeping
+    ports:
+      -  "8080:80"
+    volumes:
+     -  /home/$USER/temp/smokeping/smokeping/libsmokeping:/var/lib/smokeping
+     -  /home/$USER/temp/smokeping/smokeping/runsmokeping:/var/run/smokeping
+     -  /home/$USER/temp/smokeping/smokeping/etcsmokeping:/etc/smokeping
+     -  /home/$USER/temp/smokeping/smokeping/syslog:/var/log/
+    environment:
+      -  TERM=xterm
+    container_name: spdocker
+    command: /root/script.sh
